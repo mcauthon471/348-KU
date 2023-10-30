@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+</head>
+<body>
+    <h2>Multiplication Table</h2>
+    <form method="post">
+        Enter a number: <input type="text" name="number" />
+        <input type="submit" value="Generate Table" />
+    </form>
+
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $number = isset($_POST['number']) ? intval($_POST['number']) : 0;
+
+        if ($number > 0) {
+            echo '<h3>Multiplication Table for ' . $number . '</h3>';
+            echo '<table border="1">';
+            
+            // Display column indexes
+            echo '<tr>';
+            echo '<th></th>';
+            for ($col = 1; $col <= $number; $col++) {
+                echo '<th>' . $col . '</th>';
+            }
+            echo '</tr>';
+            
+            // Generate the multiplication table
+            for ($row = 1; $row <= $number; $row++) {
+                echo '<tr>';
+                echo '<th>' . $row . '</th>'; // Display row index
+                
+                for ($col = 1; $col <= $number; $col++) {
+                    $result = $row * $col;
+                    echo '<td>' . $result . '</td>';
+                }
+                echo '</tr>';
+            }
+
+            echo '</table>';
+        } else {
+            echo '<p>Please enter a positive number.</p>';
+        }
+    }
+    ?>
+
+</body>
+</html>

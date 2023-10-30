@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <Label>Lab 7 Practice 2</Label>
+    <head>
+        <title>Lab 7 Practice 2</title>
+        <link rel="stylesheet" href="practice2.css">
+        <script>
+            function changeColor() {
+                const border = document.getElementById("border");
+                const textParagraph = document.getElementById("textParagraph");
+                const redText = document.getElementById("red-text").value;
+                const greenText = document.getElementById("green-text").value;
+                const blueText = document.getElementById("blue-text").value;
+                const borderRed = document.getElementById("border-red").value;
+                const borderGreen = document.getElementById("border-green").value;
+                const borderBlue = document.getElementById("border-blue").value;
+                const border_width = document.getElementById("border-width").value;
+                textParagraph.style.color = `rgb(${redText}, ${greenText}, ${blueText})`;
+                border.style.borderColor = `rgb(${borderRed}, ${borderGreen}, ${borderBlue})`;
+                border.style.borderWidth = `${border_width}px`;
+                return false;
+                };
+        </script>
+    </head>
+    <div id="border">
+        <p id="textParagraph">This is some text</p>
+    </div>
+    <form id="color">
+        <label for="red-text">Text Color Red Value:(0-255)</label>
+        <input type="text" id="red-text"><br>
+        <label for="green-text">Text Color Green Value:(0-255)</label>
+        <input type="text" id="green-text"><br>
+        <label for="blue-text">Text Color Blue Value:(0-255)</label>
+        <input type="text" id="blue-text"><br>
+        <label for="border-red">Border Color Red Value:(0-255)</label>
+        <input type="text" id="border-red"><br>
+        <label for="border-green">Border Color Green Value:(0-255)</label>
+        <input type="text" id="border-green"><br>
+        <label for="border-blue">Border Color Blue Value:(0-255)</label>
+        <input type="text" id="border-blue"><br>
+        <label for="border-width">Border Width:</label>
+        <input type="text" id="border-width"><br>
+        <button type="button" onclick="changeColor()">Click to change color</button>
+    </form>
+    
+</html>

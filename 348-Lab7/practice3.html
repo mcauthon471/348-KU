@@ -1,0 +1,40 @@
+<!-- FILEPATH: /c:/Users/mc123/OneDrive/Desktop/348-Lab7/practice3.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Verification</title>
+    <script>
+        function verifyPassword() {
+            // Get the password inputs
+            var password1 = document.getElementById("password1").value;
+            var password2 = document.getElementById("password2").value;
+
+            // Check if passwords are at least 8 characters long
+            if (password1.length < 8 || password2.length < 8) {
+                alert("Passwords must be at least 8 characters long.");
+                return;
+            }
+
+            // Check if passwords match
+            if (password1 !== password2) {
+                alert("Passwords do not match.");
+                return;
+            }
+
+            // If passwords are valid, alert the user
+            else{
+                alert("Passwords matched!");
+                return;}
+        }
+    </script>
+</head>
+<body>
+    <h1>Password Verification</h1>
+    <label for="password1">Enter password:</label>
+    <input type="password" id="password1"><br><br>
+    <label for="password2">Re-enter password:</label>
+    <input type="password" id="password2"><br><br>
+    <button onclick="verifyPassword()">Verify Password</button>
+</body>
+</html>

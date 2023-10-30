@@ -1,0 +1,23 @@
+
+#border{
+    border-width: 5px;
+    border-color:rgb(0,0,0);
+    border-style: solid;
+}
+
+#textPargraph{
+    color: rgb(0,0,0);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#color {
+    margin-top: 20px;
+}
+#customize-button {
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
