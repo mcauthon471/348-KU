@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    background-image: url(https://raw.githubusercontent.com/mcauthon471/Personal-Website/main/static_files/Images/about-landing.jpg) ;
+    background-size: cover;
+}
+.topnav{
+    position: relative;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    opacity: 100%;
+    justify-content: space-between;
+    background-image: none;
+    z-index: 1000;
+}
+.topnav a {
+    float:left;
+    color: #000000;
+    text-decoration: none;
+    font-size: 17px;
+    height:1in;
+    width:100%;
+
+}
+.topnav ul{
+    list-style-type: none;
+    overflow: hidden;
+    background-image: none;
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+}
+.topnav ul li{
+    list-style-type: none;
+    overflow: hidden;
+    background-image: none;
+    display: block;
+    position: relative;
+    
+}
+.topnav img{
+    height: 100%;
+    overflow-x: auto;
+    background-image: none;
+    display: flex;
+    justify-content: space-between;
+}
+body{
+    overflow-y: scroll;
+    overflow-x: clip;
+}
+section{
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+/* @keyframes animateBg{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+} */
+
+span{
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #FADF71;
+    border-radius: 100%;
+    box-shadow: 0 2px 0 4px rgba(255,255,255,0.1),0 0 0 8px rgba(255,255,255,0.1),0 0 20px rgba(255,255,255,0.1);
+    animation-delay: 1s;
+    animation: animate 3s linear infinite;    
+
+}
+span::before{
+    content:'';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg,#FADF71,transparent);
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+    70%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        transform: rotate(315deg) translateX(-1000px);
+        opacity: 0;
+    }
+}
+span:nth-child(1){
+    top: 0;
+    right: 0;
+    left: initial;
+    animation-delay: 0s;
+    animation-duration: 1s;
+}
+span:nth-child(2){
+    top: 0;
+    right: 80px;
+    left: initial;
+    animation-delay: 0.2s;
+    animation-duration: 3s;
+}
+span:nth-child(3){
+    top: 80;
+    right: 0px;
+    left: initial;
+    animation-delay: 0.4s;
+    animation-duration: 2s;
+}
+span:nth-child(4){
+    top: 0;
+    right: 180px;
+    left: initial;
+    animation-delay: 0.6s;
+    animation-duration: 1.5s;
+}
+span:nth-child(5){
+    top: 0;
+    right: 400px;
+    left: initial;
+    animation-delay: 0.8s;
+    animation-duration: 2.5s;
+}
+span:nth-child(6){
+    top: 0;
+    right: 600px;
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 3s;
+}
+span:nth-child(7){
+    top: 300px;
+    right: 0px;
+    left: initial;
+    animation-delay: 1.2s;
+    animation-duration: 1.75s;
+}
+span:nth-child(8){
+    top: 0px;
+    right: 700px;
+    left: initial;
+    animation-delay: 1.4s;
+    animation-duration: 1.25s;
+}
+span:nth-child(9){
+    top: 0px;
+    right: 1000px;
+    left: initial;
+    animation-delay: 0.75s;
+    animation-duration: 2.25s;
+}
+span:nth-child(9){
+    top: 0px;
+    right: 450px;
+    left: initial;
+    animation-delay: 2.75s;
+    animation-duration: 2.75s;
+}
+.container{
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(autofit,minmax(5,1fr));
+    grid-template-rows: repeat(autofit,minmax(5,1fr));
+    margin: 25px auto;
+    opacity: 70%;
+    width: 75%;
+    height: 75vh;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    overflow: auto;
+    background-color: #000000;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: 50vh;
+    opacity: 100%;
+    object-fit: contain;
+    background: none;
+}
+h1{
+    display: block;
+    text-align:center;
+    text-wrap: wrap;
+    font-size: 90px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    opacity: 100%;
+    color: #fff;
+    background: none;
+}
+.photo{
+    display: block;
+    float: left;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
+    opacity: 100%;
+    border: 2px solid #fff;
+    background: #FFFFFF;
+    overflow: hidden;
+    object-fit: contain;
+    contain: content;
+}
+.photo img{
+    background: none;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;   
+}
+.text{
+    display: block;
+    float: center;
+    margin-right: 5px;
+    border-radius: 10px;
+    opacity: 100%;  
+    border: 2px solid #fff;
+    background-color: transparent;
+    background: none;
+    overflow: hidden;
+    contain: content;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.text p {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    opacity: 100%;
+    color: #fff;
+    background: none;
+}
+.icon{
+    background: none;
+    width: 100%;
+    opacity: 100%;  
+    margin-left: 5px;
+    overflow: hidden;
+    contain: content;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+#One.icon {
+    background: none;
+    display: block;
+    float: left;
+    height: 50%;
+    width: 50%;
+    margin: auto;
+    background-color:transparent;
+    opacity: 100%;
+    contain: content;
+}
+#Two.icon{
+    background: none;
+    display: block;
+    float: right;
+    height: 50%; 
+    width: 50%;
+    margin: 0% 0% 0% 0%;
+    background-color:transparent;
+    opacity: 100%;
+    contain: content;
+}
+#Three.icon{
+    background: none;
+    display: block;
+    height: 50%;
+    width: 50%;
+    margin: 50% 25% 0% 25%;
+    background-color:transparent;
+    opacity: 100%;
+    contain: content;
+}
+.icon img{
+    background: none;
+    max-width: 100%;
+    max-height: 100%;
+}
